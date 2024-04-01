@@ -17,5 +17,14 @@
     {{ end }}
 
     {{ .Content }}
+
+    <hr>
+    Tags:
+    <ul>
+
+        {{ range .Site.Taxonomies.tags }}
+        <li><a href="{{ .Page.Permalink }}">{{ .Page.LinkTitle }}</a></li>
+        {{ end }}
+    </ul>
 </article>
 {{ end }}
